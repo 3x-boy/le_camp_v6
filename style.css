@@ -1,0 +1,35 @@
+/* Moment of Preference 
+    濃い色：#7730B3
+    薄い色：#D4B8EC
+*/
+
+body, table, div, p, dl {
+    font: 400 14px/22px Helvetica, 'Segoe UI', Arial, freesans, sans-serif;
+    word-wrap: break-word;
+}
+
+.main_img {
+    background-color: #7730B3;
+    color:  white;
+    size:   large;
+    height: 150px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+    align-items: center; /* 縦方向中央揃え */
+    -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+    justify-content: center; /* 横方向中央揃え */}
+
+.kategory {
+    background-color: #D4B8EC;
+}
+
+.result_title {
+    background-color: #D4B8EC;
+    text-align: center;
+    font-size: 17px;
+}
+
+.mini {
+    font-size: small;
+}
