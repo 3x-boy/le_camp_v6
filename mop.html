@@ -9,46 +9,142 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
       <!-- 左サイド -->
-      <div class="col-lg-8 mt-2 float-left">
+      <div class="col-sm-8 mt-2">
         <div class="result_title border">
           解　析　結　果
         </div>
-        <div class="col-lg-8 mt-2 float-left">
+        <div class="mt-2">
           選択した属性：
         </div>
+        <p>
+          <img src="img/setumei1.png" width=140px>
+          <img src="img/grey.png" width=140px>
+          <img src="img/grey.png" width=140px>
+          <img src="img/grey.png" width=140px>
+          <img src="img/grey.png" width=140px>
+        </p>
+        <img src="img/setumei1.png" width=730px>
       </div>
 
       <!-- 右サイド -->
-      <div class="col-lg-4 mt-2 float-right">
-        <div class="main_img text-center md-2 align-middle">
+      <div class="col-sm-4 mt-2">
+        <div class="main_img md-2">
             <h1>Moment of <br>preference</h1>
         </div>
+        <!--動画ファイル選択-->
         <div class="input-group mt-2 border">
-            <input type="file" class="form-control-file" id="File">
-<!--                  <input type="text" class="form-control-sm" placeholder="動画を選択してください">
-            <span class="input-group-btn">
-              <button type="button" class="btn btn-default">検索</button>
-            </span>-->
+          <input type="file" class="form-control-file" id="movie-file">
         </div>
+
+        <!--属性カテゴリ-->
         <div class="border my-2">
-          <div class="kategory">髪の毛</div>
+          <div class="kategory px-1">髪型</div>
           <div class="row">
-            <div class="col-4 checkbox mini">
-              <input type="checkbox" value="chk6">前髪
-            </div>
-            <div class="col-4 checkbox mini">
-              <input type="checkbox" value="chk9">黒髪
-            </div>
-            <div class="col-4 checkbox mini">
-              <input type="checkbox" value="chk10">金髪
-            </div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">前髪</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">黒髪</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">金髪</div>
           </div>
-        </div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk12">茶髪</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">白髪</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">ｽｷﾝﾍｯﾄﾞ</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">額が広い</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">ストレート</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">カール</div>
+          </div>
+        </div><!--属性カテゴリ-->
+
+        <!--属性カテゴリ-->
+        <div class="border my-2">
+          <div class="kategory px-1">パーツ</div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">三日月眉</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">ゲジゲジ眉</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">細目</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk12">目下たるみ</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">大きな鼻</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">とがった鼻</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">大きな唇</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">口半開き</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">二重あご</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">高い頬骨</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">うりざね顔</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">ぽっちゃり</div>
+          </div>
+        </div><!--属性カテゴリ-->
+
+        <!--属性カテゴリ-->
+        <div class="border my-2">
+          <div class="kategory px-1">ひげ</div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">剃り残し</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">やぎひげ</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">口ひげ</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk12">頬ひげ</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">なし</div>
+          </div>
+        </div><!--属性カテゴリ-->
+  
+        <!--属性カテゴリ-->
+        <div class="border my-2">
+          <div class="kategory px-1">表情・状態</div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">笑顔</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">紅顔</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">顔色が悪い</div>
+          </div>
+        </div><!--属性カテゴリ-->
+  
+        <!--属性カテゴリ-->
+        <div class="border my-2">
+          <div class="kategory px-1">装飾</div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">メガネ</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">イヤリング</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">帽子</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk12">ネックレス</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">ネクタイ</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">厚化粧</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">口紅</div>
+          </div>
+        </div><!--属性カテゴリ-->
+
+        <!--属性カテゴリ-->
+        <div class="border my-2">
+          <div class="kategory px-1">その他</div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk6">若さ</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk9">ぼやけた</div>
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk10">魅力的</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 mini checkbox"><input type="checkbox" value="chk12">男</div>
+          </div>
+        </div><!--属性カテゴリ-->
+  
+        <div class="btn btn-primary float-right mx-1">送信</div>
+        <div class="btn btn-primary float-right mx-1">クリア</div>
+        <div class="btn btn-primary float-right mx-1">保存</div>
       </div><!--右サイド終わり-->
-    </div>
+    </div><!--row-->
+  </div><!--container-->
   <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
   <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 </body>
