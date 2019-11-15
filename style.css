@@ -18,16 +18,35 @@ body, table, div, p, dl {
     -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
     align-items: center; /* 縦方向中央揃え */
     -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
-    justify-content: center; /* 横方向中央揃え */}
+    justify-content: center; /* 横方向中央揃え */
+}
 
-.kategory {
+.border_deep {
+    border: 1px solid #7730b3
+}
+
+.kategory_name {
     background-color: #D4B8EC;
+}
+
+.kategory_choise {
+    width: 150px;
+    background-color: #D4B8EC;
+    text-align: center;
+    border-right: 1px solid #7730b3;
 }
 
 .result_title {
     background-color: #D4B8EC;
     text-align: center;
-    font-size: 17px;
+    font-size: 20px;
+    height: 30px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+    align-items: center; /* 縦方向中央揃え */
+    -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+    justify-content: center; /* 横方向中央揃え */
 }
 
 .mini {
