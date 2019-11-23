@@ -1,0 +1,53 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <button disabled>ボタン</button>
+
+    <div class="border_1 my-2">
+        <div class="kategory_name">髪型</div>
+        <div class="row">
+            <div class="col-sm-4 checkbox">
+            <input type="checkbox" id="chk1" name="kategory[]" value="前髪">
+                <label for="chk1">前髪</label></div>
+            <div class="col-sm-4 checkbox">
+            <input type="checkbox" id="chk2" name="kategory[]" value="黒髪">
+                <label for="chk2">黒髪</label></div>
+            <div class="col-sm-4 checkbox">
+            <input type="checkbox" id="chk3" name="kategory[]" value="金髪">
+                <label for="chk3">金髪</label></div>
+        </div>
+    </div>
+        
+    <script>
+        //非活性　判定
+        var result = $('button').prop('disabled');
+        var kate = null;
+        console.log( result );
+
+        //クリック判定
+        $('button').on('click', function() {
+            console.log('クリックされました！');
+
+        })
+        /* チェックボックス（複数）の値 */
+        $('input:checked').each(function() {
+            kate = $(this).val();
+            console.log($(this).val());
+            console.log(kate);
+        });
+
+        // チェックボックスにチェックがあったら非活性解除
+        $('#chk1').change(function() {
+            if ($('#chk1').prop(false) {
+                $('button').prop('disabled', true);
+            } else {
+                $('button').prop('disabled', false);
+            }
+            
+        })
+
+    </script>
+</body>
+</html>

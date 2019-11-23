@@ -1,0 +1,33 @@
+
+ 
+  <html>
+  <head>
+  <meta http-equiv="Content-Language" content="ja">
+  <meta http-equiv="Content-Type" content="text/html; charset=Shift-JIS">
+  <title>処理中メッセージ表示</title>
+  <link rel="stylesheet" href="STYLE.CSS">
+  </head>
+  <body background="IMG/sample.jpg">
+  <br /><br /><br /><br /><br />
+
+  <form name="addForm" action="SMPMSG_END.HTM" method="POST">
+  <hr>
+  <br /><br />
+  <center>
+          <img src="IMG/LOADING.GIF" class="loadimg">
+        <p class="loadmsg"><br>
+          <p><font size="5" color="#333333">処理中...<br>
+          しばらくお待ち下さい。</font></p>
+        </p>
+
+    <script type="text/javascript">
+        document.getElementById("Loading").style.display = "block";  
+        document.getElementById("Loading").style.top = 150
+        document.getElementById("Loading").style.left = (document.body.clientWidth - 300) / 2; 
+   </script>
+   <br /><br />
+   <hr>
+  </center>
+  </body>
+  </html>
+					

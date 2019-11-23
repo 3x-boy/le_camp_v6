@@ -1,0 +1,188 @@
+/* Moment of Preference 
+    ペールピンク:#F4B4D0
+    ペールブルー：#9FD9F6
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap');
+
+body, table, div, p, dl {
+    /*font: 400 14px/22px Helvetica, 'Segoe UI', Arial, freesans, sans-serif;*/
+    font-family: 'Noto Sans JP', sans-serif;
+    word-wrap: break-word;
+    color: #555;
+}
+
+.main_img {
+    background-color: #F4B4D0;
+    color:  white;
+    font-weight: bold;
+    font-size: 150% !important;
+    height: 150px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+    align-items: center; /* 縦方向中央揃え */
+    -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+    justify-content: center; /* 横方向中央揃え */
+}
+
+.border_1 {
+    border: 1px solid #9FD9F6;
+}
+
+.border_2 {
+    border: 2px solid #9FD9F6;
+}
+
+.border_u2 {
+    border: solid #9FD9F6;
+    border-width: 0px 2px 2px 2px;
+}
+
+.kategory_name {
+    background-color: #9FD9F6;
+    color: white;
+    padding-left: 1px;
+}
+
+.kategory_choise {
+    width: 150px;
+    text-align: center;
+}
+
+.result_title {
+    background-color: #9FD9F6;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+    height: 30px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+    align-items: center; /* 縦方向中央揃え */
+    -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+    justify-content: center; /* 横方向中央揃え */
+}
+
+.btn-zone {
+    width: 100%;
+    height: 30px;
+}
+
+.btn-flat-border {
+    width: 80px;
+    display: inline-block;
+    padding: 0.1em;
+    text-decoration: none;
+    text-align: center;
+    border: 2px solid #9FD9F6;
+    background: #9FD9F6;
+    margin: 5px 0px 2px 5px;
+}
+
+.btn-flat-border:hover {
+    background: #F4B4D0;
+    border: 2px solid #F4B4D0;
+    color: white;
+}
+
+/* チェックボックス 属性 */
+input[type="checkbox"] { display: none; }
+
+input[type="checkbox"] + label {
+    display: block;
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 20px;
+    font-size: small;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #9FD9F6;
+    position: absolute;
+    padding-left: 5px; /*?*/
+    left: 0;
+    top: 0;
+    opacity: .6;
+    -webkit-transition: all .12s, border-color .08s;
+    transition: all .12s, border-color .08s;
+}
+
+input[type="checkbox"]:checked + label:before {
+    width: 10px;
+    top: -5px;
+    left: 5px;
+    border-radius: 0;
+    opacity: 1;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* サムネイル */
+.thumbnails {
+    text-align: center;
+    padding-top: 5px;
+}
+
+ul.image_list li {
+    display: inline-block;
+}
+
+ul.image_list li .image_box {
+    width: 140px;
+    position: relative;
+}
+
+.image_box img.thumbnail {
+    border: 2px solid #9FD9F6;
+    width: 100%;
+}
+
+.image_box .disabled_checkbox {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: none;
+}
+
+.image_box img.thumbnail.checked {
+    border: 3px solid #F4B4D0;
+    box-sizing: border-box;
+}
+
+.image_box img.thumbnail.checked + .disabled_checkbox {
+    display: block;
+}
+
+/* 読込中 */
+#loading {
+    display: table;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    opacity: 0.8;
+}
+   
+#loading .loadingMsg {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 140px;
+    background: url("[LoadingイメージのURL]") center center no-repeat;
+}

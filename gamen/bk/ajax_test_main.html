@@ -1,0 +1,42 @@
+<html>
+<head>        
+        <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+    </head>
+<body>
+    <div class="image_dl">
+            <p><img src="画像1url" width="400"></p>
+            <p class="downloadButton"><a href="画像1url">ダウンロード１</a></p>
+            </div>
+            
+            <div class="image_dl">
+            <p><img src="画像2url" width="400"></p>
+            <p class="downloadButton"><a href="画像2url">ダウンロード2</a></p>
+            </div>
+                
+<div class="result">ここにajaxの結果を書き換えます</div>
+<input type="button" class="sample_btn" value="ajax通信で取得する">
+<script>
+        $(function(){
+            //.sampleをクリックしてajax通信を行う
+            $('.sample_btn').click(function(){
+                $.ajax({
+                    url: 'ajax_test.html',
+                    /* ajax_test.html */
+                    /* https://kinocolog.com/ajax/test.html というURL指定も可 */
+                    type: 'GET',
+                    dataType: 'html'
+                }).done(function(data){
+                    /* 通信成功時 */
+                    $('.result').html(data); //取得したHTMLを.resultに反映
+                                
+                }).fail(function(data){
+                    /* 通信失敗時 */
+                    alert('通信失敗！');
+                            
+                });
+            });
+        });
+        </script>
+
+    </body>
+</html>

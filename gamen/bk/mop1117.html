@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>Moment of preference</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <!-- 左サイド -->
+      <div class="col-sm-8 mt-2">
+        <div class="result_title border_1">
+          解　析　結　果
+        </div>
+        <div class="border_u2 mb-2">
+          <div class="row">
+            <div class="col-sm-2 kategory_choise">選択した属性：</div>
+            <div id="p01" class="col-sm-10"></div>
+          </div>
+        </div>
+
+        <!-- スライド -->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <!-- スライドさせる画像の設定 -->
+          <!--WELCOME-->
+          <div class="carousel-inner border_2">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/welcome.jpg" alt="第1スライド">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/howto_1.jpg" alt="第2スライド">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/howto_2_1.jpg" alt="第3スライド">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/howto_2.jpg" alt="第2スライド">
+            </div>
+          </div>
+  
+          <!--サンプル写真
+          <div class="carousel-inner border_2">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="img/demo1.jpg" alt="第1スライド">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/demo2.jpg" alt="第2スライド">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/demo3.jpg" alt="第3スライド">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/demo2.jpg" alt="第2スライド">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="img/demo3.jpg" alt="第3スライド">
+            </div>
+          </div>-->
+          <!-- スライドコントロールの設定 -->
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">前へ</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">次へ</span>
+          </a>
+        </div>
+
+        <!-- サムネイル -->
+        <div class="thumbnails">
+          <ul class="image_list">
+
+            <!--WELCOME-->
+            <li>
+              <div class="image_box">
+                <img class="thumbnail" src="img/welcome.jpg" name="img1" alt="demo1" />
+                <input class="disabled_checkbox" type="checkbox" checked />
+              </div>
+            </li>
+            <li>
+              <div class="image_box">
+                <img class="thumbnail" src="img/howto_1.jpg" alt="demo2" />
+                <input class="disabled_checkbox" type="checkbox" checked />
+              </div>
+            </li>
+            <li>
+              <div class="image_box">
+                <img class="thumbnail" src="img/howto_2_1.jpg" alt="demo2" />
+                <input class="disabled_checkbox" type="checkbox" checked />
+              </div>
+            </li>
+            <li>
+              <div class="image_box">
+                <img class="thumbnail" src="img/howto_2.jpg" alt="demo2" />
+                <input class="disabled_checkbox" type="checkbox" checked />
+              </div>
+            </li>
+            <li>
+                <div class="image_box">
+                  <img class="thumbnail" src="img/howto_2.jpg" alt="demo2" />
+                  <input class="disabled_checkbox" type="checkbox" checked />
+                </div>
+              </li>
+    
+            <!--サンプル写真
+            <li>
+              <div class="image_box">
+                <img class="thumbnail" src="img/demo1.jpg" name="img1" alt="demo1" />
+                <input class="disabled_checkbox" type="checkbox" checked />
+              </div>
+            </li>
+            <li>
+              <div class="image_box">
+                <img class="thumbnail" src="img/demo2.jpg" alt="demo2" />
+                <input class="disabled_checkbox" type="checkbox" checked />
+              </div>
+            </li>
+            <li>
+              <div class="image_box">
+                <img class="thumbnail" src="img/demo3.jpg" alt="demo2" />
+                <input class="disabled_checkbox" type="checkbox" checked />
+              </div>
+            </li>
+            <li>
+              <div class="image_box">
+                <img class="thumbnail" src="img/demo2.jpg" alt="demo2" />
+                <input class="disabled_checkbox" type="checkbox" checked />
+              </div>
+            </li>
+            <li>
+              <div class="image_box">
+                <img class="thumbnail" src="img/demo3.jpg" alt="demo2" />
+                <input class="disabled_checkbox" type="checkbox" checked />
+              </div>
+            </li>-->
+          </ul>
+        </div>
+      </div><!--左サイド終わり-->
+
+      <!-- 右サイド -->
+      <div class="col-sm-4 mt-2">
+        <div class="main_img md-2">
+            <h1>Moment of <br>preference</h1>
+        </div>
+        <!--動画ファイル選択-->
+        <div class="input-group mt-2 border_1">
+          <input type="file" class="form-control-file" id="movie-file" accept=".MVO, .mp4">
+        </div>
+
+        <!--ボタン群-->
+        <div class="btn-zone mb-1">
+          <div class="btn-flat-border float-right">送信</div>
+          <div id="clear" class="btn-flat-border float-right">クリア</div>
+          <div class="btn-flat-border float-right">保存</div>
+        </div>
+    
+        <!--属性カテゴリ-->
+        <div class="border_1 my-2">
+          <div class="kategory_name px-1">髪型</div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk1" name="kategory[]" value="前髪">
+                <label for="chk1">前髪</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk2" name="kategory[]" value="黒髪">
+                <label for="chk2">黒髪</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk3" name="kategory[]" value="金髪">
+                <label for="chk3">金髪</label></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk4" name="kategory[]" value="茶髪">
+                <label for="chk4">茶髪</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk5" name="kategory[]" value="白髪">
+                <label for="chk5">白髪</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk6" name="kategory[]" value="額が広い">
+                <label for="chk6">額が広い</label></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+                <input type="checkbox" id="chk7" name="kategory[]" value="スキンヘッド">
+                  <label for="chk7">スキンヘッド</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk8" name="kategory[]" value="ストレート">
+                <label for="chk8">ストレート</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk9" name="kategory[]" value="カール">
+                <label for="chk9">カール</label></div>
+          </div>
+        </div><!--属性カテゴリ-->
+
+        <!--属性カテゴリ-->
+        <div class="border_1 my-2">
+          <div class="kategory_name px-1">パーツ</div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk10" name="kategory[]" value="三日月眉">
+                <label for="chk10">三日月眉</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk11" name="kategory[]" value="ゲジゲジ眉">
+                <label for="chk11">ゲジゲジ眉</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk12" name="kategory[]" value="細目">
+                <label for="chk12">細目</label></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk13" name="kategory[]" value="目下たるみ">
+                <label for="chk13">目下たるみ</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk14" name="kategory[]" value="大きな鼻">
+                <label for="chk14">大きな鼻</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk15" name="kategory[]" value="とがった鼻">
+                <label for="chk15">とがった鼻</label></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk16" name="kategory[]" value="大きな唇">
+                <label for="chk16">大きな唇</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk17" name="kategory[]" value="口を半開き">
+                <label for="chk17">口を半開き</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk18" name="kategory[]" value="二重あご">
+                <label for="chk18">二重あご</label></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk19" name="kategory[]" value="高い頬骨">
+                <label for="chk19">高い頬骨</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk20" name="kategory[]" value="うりざね顔">
+                <label for="chk20">うりざね顔</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk21" name="kategory[]" value="ぽっちゃり">
+                <label for="chk21">ぽっちゃり</label></div>
+          </div>
+        </div><!--属性カテゴリ-->
+
+        <!--属性カテゴリ-->
+        <div class="border_1 my-2">
+          <div class="kategory_name px-1">ひげ</div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk22" name="kategory[]" value="剃り残し">
+                <label for="chk22">剃り残し</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk23" name="kategory[]" value="やぎひげ">
+                <label for="chk23">やぎひげ</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk24" name="kategory[]" value="口ひげ">
+                <label for="chk24">口ひげ</label></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk25" name="kategory[]" value="頬ひげ">
+                <label for="chk25">頬ひげ</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk26" name="kategory[]" value="ひげがない">
+                <label for="chk26">ひげがない</label></div>
+          </div>
+        </div><!--属性カテゴリ-->
+  
+        <!--属性カテゴリ-->
+        <div class="border_1 my-2">
+          <div class="kategory_name px-1">表情・状態</div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk27" name="kategory[]" value="笑顔">
+                <label for="chk27">笑顔</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk28" name="kategory[]" value="紅顔">
+                <label for="chk28">紅顔</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk29" name="kategory[]" value="気分が悪い">
+                <label for="chk29">気分が悪い</label></div>
+          </div>
+        </div><!--属性カテゴリ-->
+  
+        <!--属性カテゴリ-->
+        <div class="border_1 my-2">
+          <div class="kategory_name px-1">装飾</div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk30" name="kategory[]" value="メガネ">
+                <label for="chk30">メガネ</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk31" name="kategory[]" value="イヤリング">
+                <label for="chk31">イヤリング</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk32" name="kategory[]" value="帽子">
+                <label for="chk32">帽子</label></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk33" name="kategory[]" value="ネックレス">
+                <label for="chk33">ネックレス</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk34" name="kategory[]" value="ネクタイ">
+                <label for="chk34">ネクタイ</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk35" name="kategory[]" value="厚化粧">
+                <label for="chk35">厚化粧</label></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk36" name="kategory[]" value="口紅">
+                <label for="chk36">口紅</label></div>
+          </div>
+        </div><!--属性カテゴリ-->
+
+        <!--属性カテゴリ-->
+        <div class="border_1 my-2">
+          <div class="kategory_name px-1">その他</div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk37" name="kategory[]" value="若さ">
+                <label for="chk37">若さ</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk38" name="kategory[]" value="ぼやけた">
+                <label for="chk38">ぼやけた</label></div>
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk39" name="kategory[]" value="魅力的">
+                <label for="chk39">魅力的</label></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4 checkbox">
+              <input type="checkbox" id="chk40" name="kategory[]" value="男">
+                <label for="chk40">男</label></div>
+          </div>
+        </div><!--属性カテゴリ-->
+  
+      </div><!--右サイド終わり-->
+    </div><!--row-->
+  </div><!--container-->
+  <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="js/query.js"></script>
+</body>
+</html>
